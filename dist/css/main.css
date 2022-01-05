@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  max-width: 100%;
+  background-image: url(../images/bg-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.storage {
+  width: 70%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  background-color: #1d2c67;
+  border-radius: 10px 100px 10px 10px;
+}
+
+.storage__logo {
+  height: 40px;
+  width: 130px;
+}
+
+.storage__box {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.storage__box--icon {
+  padding: 0.8rem;
+  background-color: #0c122c;
+  border-radius: 10px;
+  margin-right: 10px;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.progress {
+  margin-top: 1em;
+  width: 70%;
+  padding: 1rem 2rem 2rem 2rem;
+  color: #dddbff;
+  font-family: "Raleway";
+  font-size: 14px;
+  background-color: #1d2c67;
+  border-radius: 10px;
+}
+
+.progress__message {
+  text-align: center;
+}
+
+.progress__message span {
+  font-weight: 700;
+}
+
+.progress__full {
+  height: 15px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: #0c122c;
+  padding: 0.2rem;
+}
+
+.progress__full--used {
+  width: 70%;
+  height: 8.4px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  padding: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.progress__full--scroll {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #dddbff;
+}
+
+.progress__capacity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.progress__storage-left {
+  padding: 1rem;
+  font-weight: 700;
+  color: #0c122c;
+  background-color: #dddbff;
+  font-size: 2rem;
+  border-radius: 10px;
+  width: 130px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 33%;
+}
+
+.progress__storage-left span {
+  font-size: 0.8rem;
+  color: #848794;
+}
+/*# sourceMappingURL=main.css.map */
