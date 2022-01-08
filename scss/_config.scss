@@ -19,3 +19,15 @@ $typography: (
     'font-size' : 14px,
     'font-family' : 'Raleway'
 );
+
+// Mixin for responsive
+@mixin medium-screen {
+    @media screen and (min-width: 769px) {
+        @content;
+    }
+}
+@mixin large-screen {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}
