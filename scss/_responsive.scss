@@ -1,0 +1,46 @@
+@include medium-screen {
+    main {
+        background-image: url(../images/bg-desktop.png);
+        background-color: map-get($colors, 'very-dark-blue');
+        background-size: contain;
+        background-position: right 0 bottom -30%;
+        display: grid;
+        grid-template-columns: 20% 1fr 1fr 20%;
+        grid-template-areas: 
+            '. storage  progress .';
+        justify-items: end;
+        grid-column-gap: 1rem;
+    }
+    .storage {
+        grid-area: storage;
+        align-items: end;
+    }
+    .progress {
+        grid-area: progress;
+        justify-self: start;
+        width: 100%;
+        &__full {
+            position: relative;
+        }
+        &__message {
+            text-align: left;
+        }
+        &__storage-left {
+            top: -33%;
+            left: 38%;
+            border-radius: 10px 10px 0 10px;
+            position: absolute;
+            align-items: start;
+            &::before {
+                content: ' ';
+                width: 0;
+                height: 0;
+                border: 10px solid transparent;
+                border-right-color: lighten(map-get($colors, 'pale-blue'), 100%);
+                position: absolute;
+                bottom: -14%;
+                right: 0;
+            }
+        }
+    }
+}
