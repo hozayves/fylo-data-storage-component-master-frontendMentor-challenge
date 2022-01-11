@@ -86,6 +86,7 @@ main {
   font-size: 14px;
   background-color: #1d2c67;
   border-radius: 10px;
+  position: relative;
 }
 
 .progress__message {
@@ -146,7 +147,7 @@ main {
   padding: 1rem;
   font-weight: 700;
   color: #0c122c;
-  background-color: #dddbff;
+  background-color: white;
   font-size: 2rem;
   border-radius: 10px;
   width: 130px;
@@ -158,5 +159,62 @@ main {
 .progress__storage-left span {
   font-size: 0.8rem;
   color: #848794;
+}
+
+@media screen and (min-width: 769px) {
+  main {
+    background-image: url(../images/bg-desktop.png);
+    background-color: #0c122c;
+    background-size: contain;
+    background-position: right 0 bottom -30%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 1fr 1fr 20%;
+        grid-template-columns: 20% 1fr 1fr 20%;
+        grid-template-areas: '. storage  progress .';
+    justify-items: end;
+    grid-column-gap: 1rem;
+  }
+  .storage {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: storage;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  .progress {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: progress;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    width: 100%;
+  }
+  .progress__full {
+    position: relative;
+  }
+  .progress__message {
+    text-align: left;
+  }
+  .progress__storage-left {
+    top: -33%;
+    left: 38%;
+    border-radius: 10px 10px 0 10px;
+    position: absolute;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .progress__storage-left::before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: white;
+    position: absolute;
+    bottom: -14%;
+    right: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
