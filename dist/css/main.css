@@ -92,6 +92,14 @@ main {
   cursor: pointer;
 }
 
+.storage__box--icon:hover {
+  background-color: #121a40;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
 .progress {
   margin-top: 1em;
   width: 70%;
@@ -143,6 +151,7 @@ main {
   width: 10px;
   border-radius: 50%;
   background-color: #dddbff;
+  cursor: pointer;
 }
 
 .progress__capacity {
@@ -183,6 +192,31 @@ main {
   color: #848794;
 }
 
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: absolute;
+  bottom: 0;
+  color: #dddbff;
+  font-family: "Raleway";
+}
+
+footer a {
+  text-decoration: none;
+  color: #848794;
+  font-weight: 700;
+}
+
+footer a:hover {
+  color: #dddbff;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
 @media screen and (min-width: 769px) {
   body {
     height: 100vh;
@@ -193,10 +227,10 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -216,6 +250,7 @@ main {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
+    margin-bottom: 1rem;
   }
   .storage {
     max-width: 25%;
@@ -261,6 +296,25 @@ main {
     position: absolute;
     bottom: -14%;
     right: 0;
+  }
+  footer {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    position: absolute;
+    bottom: 0;
+    color: #dddbff;
+    font-family: "Raleway";
+  }
+  footer a {
+    text-decoration: none;
+    color: #848794;
+    font-weight: 700;
+  }
+  footer a:hover {
+    color: #dddbff;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
   }
 }
 /*# sourceMappingURL=main.css.map */
