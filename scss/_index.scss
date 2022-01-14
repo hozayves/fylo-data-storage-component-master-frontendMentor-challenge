@@ -41,6 +41,11 @@ main {
             border-radius: 10px;
             margin-right: 10px;
             cursor: pointer;
+            &:hover {
+                background-color: lighten(map-get($colors, 'very-dark-blue'), 5%);
+                transition: all .5s ease-in-out;
+                transform: rotate(-360deg);
+            }
         }
     }
 }
@@ -80,7 +85,8 @@ main {
             height: 10px;
             width: 10px;
             border-radius: 50%;
-            background-color: map-get($colors, 'pale-blue')
+            background-color: map-get($colors, 'pale-blue');
+            cursor: pointer;
         }
     }
     &__capacity {
@@ -108,6 +114,25 @@ main {
         span {
             font-size: 0.8rem;
             color: map-get($colors, 'grayish-blue');
+        }
+    }
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;;
+    align-self: center;
+    position: absolute;
+    bottom: 0;
+    color: map-get($colors, 'pale-blue');
+    font-family: map-get($typography, 'font-family');
+    a {
+        text-decoration: none;
+        color: map-get($colors, 'grayish-blue');
+        font-weight: 700;
+        &:hover {
+            color: map-get($colors, 'pale-blue');
+            transition:all .5s ease-in-out;
         }
     }
 }
