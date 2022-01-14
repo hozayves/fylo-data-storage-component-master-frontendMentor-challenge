@@ -6,7 +6,7 @@
         background-size: contain;
         background-position: right 0 bottom -30%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -15,6 +15,7 @@
         flex-direction: row;
         justify-content: center;
         width: 100%;
+        margin-bottom: 1rem;
     }
     .storage {
         max-width: 25%;
@@ -51,6 +52,23 @@
                 position: absolute;
                 bottom: -14%;
                 right: 0;
+            }
+        }
+    }
+    footer {
+        align-self: center;
+        position: absolute;
+        bottom: 0;
+        color: map-get($colors, 'pale-blue');
+        font-family: map-get($typography, 'font-family');
+
+        a {
+            text-decoration: none;
+            color: map-get($colors, 'grayish-blue');
+            font-weight: 700;
+            &:hover {
+                color: map-get($colors, 'pale-blue');
+                transition:all .5s ease-in-out;
             }
         }
     }
