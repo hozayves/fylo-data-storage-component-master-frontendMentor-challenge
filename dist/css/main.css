@@ -10,7 +10,7 @@ html, body {
   padding: 0;
 }
 
-main {
+body {
   height: 100vh;
   max-width: 100%;
   background-image: url(../images/bg-mobile.png);
@@ -18,6 +18,23 @@ main {
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,7 +60,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   background-color: #1d2c67;
   border-radius: 10px 100px 10px 10px;
 }
@@ -72,8 +89,6 @@ main {
   background-color: #0c122c;
   border-radius: 10px;
   margin-right: 10px;
-  width: 25px;
-  height: 20px;
   cursor: pointer;
 }
 
@@ -107,7 +122,7 @@ main {
 
 .progress__full--used {
   width: 70%;
-  height: 8.4px;
+  height: 9px;
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
   background: linear-gradient(to right, #ffa399, #ff4d97);
@@ -118,6 +133,9 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .progress__full--scroll {
@@ -154,6 +172,10 @@ main {
   text-transform: uppercase;
   position: absolute;
   left: 33%;
+  -webkit-transform: translateX(-18px);
+          transform: translateX(-18px);
+  text-align: center;
+  vertical-align: baseline;
 }
 
 .progress__storage-left span {
@@ -162,37 +184,61 @@ main {
 }
 
 @media screen and (min-width: 769px) {
-  main {
+  body {
+    height: 100vh;
     background-image: url(../images/bg-desktop.png);
     background-color: #0c122c;
     background-size: contain;
     background-position: right 0 bottom -30%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 20% 1fr 1fr 20%;
-        grid-template-columns: 20% 1fr 1fr 20%;
-        grid-template-areas: '. storage  progress .';
-    justify-items: end;
-    grid-column-gap: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .storage {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: storage;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-  }
-  .progress {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    grid-area: progress;
-    -ms-grid-column-align: start;
-        justify-self: start;
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
   }
-  .progress__full {
-    position: relative;
+  .storage {
+    max-width: 25%;
+    height: 140px;
+    margin-right: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .storage__logo {
+    margin-bottom: 1rem;
+  }
+  .progress {
+    max-width: 25rem;
+    height: 80px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
   .progress__message {
     text-align: left;
@@ -202,9 +248,9 @@ main {
     left: 38%;
     border-radius: 10px 10px 0 10px;
     position: absolute;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    vertical-align: text-top;
+    -webkit-transform: translate(94px, -2px);
+            transform: translate(94px, -2px);
   }
   .progress__storage-left::before {
     content: ' ';
